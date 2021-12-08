@@ -1,0 +1,91 @@
+
+
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+/*whole form of journal entry block*/
+.form-entry {
+  width: 40%;
+  height: 85vh;
+  background-color: white;
+  border-radius: 5%;
+}
+
+/*title input*/
+#title {
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  margin: 1.5rem 0 0.8rem 1.5rem;
+
+}
+
+.textarea-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textarea {
+  background-attachment: local;
+    background-image:
+        linear-gradient(to right, white 10px, transparent 10px),
+        linear-gradient(to left, white 10px, transparent 10px),
+        repeating-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
+    line-height: 31px;
+    padding: 8px 10px;
+    width: 90%;
+    height: 65vh;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 1.2rem;
+}
+
+/*BUTTONS, EDIT, SAVE, DELETE*/
+
+.btn-wrapper {
+  text-align: right;
+  margin: 0 2rem 2rem 0;
+}
+
+.buttons {
+  width: 6rem;
+  height: 2rem;
+  margin: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+}
+
+#save-btn {
+  background-color:springgreen;
+}
+
+#delete-btn {
+  background-color:indianred;
+}
+
+/*DISPLAY JOURNAL ENTRYS*/
+.my-entrys-wrapper {
+  width: 18rem;
+  height: 85vh;
+  margin-left: 1rem;
+}
+
+.my-entrys {
+  overflow-y:scroll;
+  height: 80vh;
+}
+
+.entrys-title-header {
+  height: 3rem;
+  width: 18rem;
+  background-color: rgb(203, 203, 255);
+  margin: 0;
+}

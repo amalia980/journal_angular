@@ -1,0 +1,48 @@
+<div class="wrapper">
+
+  <form (ngSubmit)="onSave(f)" #f="ngForm" class="form-entry">
+  <input
+  type="text"
+  id="title"
+  ngModel
+  name="title"
+  placeholder="Title...">
+  <hr>
+  <div class="textarea-wrap">
+    <textarea
+    name="text"
+    id="textarea"
+    ngModel
+    name="textarea"
+    class="textarea"
+    cols="30"
+    rows="10"></textarea>
+  </div>
+
+  <div class="btn-wrapper">
+    <button type="submit" id="save-btn" class="buttons">Save</button>
+    <!--with a popup, are you sure you want to delete?-->
+    <button type="button" id="delete-btn" class="buttons">Delete</button>
+  </div>
+</form>
+
+<!--test-->
+
+
+<!--DISPLAY ENTRYS-->
+
+
+    <div class="my-entrys-wrapper">
+      <div class="entrys-title-header">
+        <h1 class="entrys-title">My Entrys</h1>
+      </div>
+
+
+    <div class="my-entrys">
+      <app-display-entrys></app-display-entrys>
+    </div>
+  </div>
+  </div>
+
+
+
