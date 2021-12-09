@@ -1,10 +1,6 @@
-import { Component, Inject, Injectable, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Component, Injectable, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Subscription } from 'rxjs';
-import { DisplayEntrysComponent } from 'src/app/display-entrys/display-entrys.component';
-import { UserInput } from './userinput.model';
-import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
+
 
 @Injectable({providedIn: 'root'})
 @Component({
@@ -12,30 +8,20 @@ import { ReactiveFormsModule } from '@angular/forms';
   templateUrl: './start-page.component.html',
   styleUrls: ['./start-page.component.css']
 })
-export class StartPageComponent implements OnInit, OnDestroy {
+export class StartPageComponent {
   @ViewChild('f') myForm: NgForm;
-  sub: Subscription;
-  item: UserInput;
 
 
-  constructor(private showEntrys: DisplayEntrysComponent) {
+  constructor() {}
 
-   }
-
-  ngOnInit(): void {
-
+  datas = {
+    title: '',
+    desc: ''
   }
 
-  onSave(form: NgForm) {
-    const data = form.value;
-    const newData = new UserInput(data.title, data.desc);
-
-    //this.showEntrys.addEntrys(newData);
-    console.log(newData);
-  }
-
-  ngOnDestroy() {
-
+  onSave() {
+    this.datas.title = this.myForm.value.title;
+    this.datas.desc = this.myForm.value.desc;
   }
 
 }

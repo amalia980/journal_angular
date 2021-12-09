@@ -1,48 +1,52 @@
 <div class="wrapper">
 
-  <form (ngSubmit)="onSave(f)" #f="ngForm" class="form-entry">
+  <form  (ngSubmit)="onSave()" #f="ngForm" class="form-entry">
   <input
   type="text"
   id="title"
   ngModel
   name="title"
+  required
   placeholder="Title...">
   <hr>
   <div class="textarea-wrap">
     <textarea
-    name="text"
-    id="textarea"
+    type="text"
+    name="desc"
+    id="desc"
     ngModel
-    name="textarea"
     class="textarea"
+    required
     cols="30"
     rows="10"></textarea>
   </div>
 
   <div class="btn-wrapper">
-    <button type="submit" id="save-btn" class="buttons">Save</button>
+    <button type="submit" id="save-btn" [disabled]="!f.valid" class="buttons">Save</button>
     <!--with a popup, are you sure you want to delete?-->
     <button type="button" id="delete-btn" class="buttons">Delete</button>
   </div>
 </form>
 
-<!--test-->
+
+<!--display my entrys-->
+<div class="my-entrys-wrapper">
+  <div class="entrys-title-header">
+    <h1 class="entrys-title">My Entrys</h1>
+  </div>
 
 
-<!--DISPLAY ENTRYS-->
-
-
-    <div class="my-entrys-wrapper">
-      <div class="entrys-title-header">
-        <h1 class="entrys-title">My Entrys</h1>
-      </div>
-
-
-    <div class="my-entrys">
-      <app-display-entrys></app-display-entrys>
+  <div class="my-entrys">
+    <div class="list-entry">
+    <a>
+      <div class="title-journal-div">
+      <h3 class="title-text">{{ datas.title }}</h3>
+    </div>
+    <div class="desc-div">
+      <p class="desc-text">{{ datas.desc }}</p>
+    </div>
+      </a>
     </div>
   </div>
-  </div>
 
-
-
+</div>
