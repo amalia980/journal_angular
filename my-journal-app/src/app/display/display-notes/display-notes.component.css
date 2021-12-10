@@ -44,7 +44,7 @@
   height: 2rem;
   width: 16.5rem;
   display: flex;
- align-items: center;
+  align-items: center;
 }
 
 .title-text {
@@ -57,11 +57,7 @@
   height: 3.5rem;
 }
 
-.desc-div > p {
-  padding: 0.5rem;
-
-}
-
 .desc-text {
   margin: 0;
+  padding: 0.5rem;
 }

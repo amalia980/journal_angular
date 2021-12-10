@@ -7,17 +7,17 @@
   </div>
 
 
-  <div class="my-entrys">
+  <div class="my-entrys"  style="cursor: pointer;">
     <div class="list-entry" *ngFor="let note of notes; let i = index" (click)="onEditItem(i)">
-    <a style="cursor: pointer;">
       <div class="title-journal-div">
       <h3 class="title-text">{{ note.title }}</h3>
     </div>
+
     <div class="desc-div">
-      <p class="desc-text">{{ note.desc }}</p>
+      <p class="desc-text">{{ note.desc | shorten }}</p>
     </div>
-      </a>
     </div>
   </div>
+
 </div>
 </div>

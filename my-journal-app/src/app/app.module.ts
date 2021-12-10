@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StartPageComponent } from './start/start-page/start-page.component';
 import { DisplayNotesComponent } from './display/display-notes/display-notes.component';
+import { ShortenPipe } from './shorten.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     StartPageComponent,
     DisplayNotesComponent,
+    ShortenPipe
 
   ],
   imports: [
