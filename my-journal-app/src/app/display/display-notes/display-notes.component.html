@@ -1,0 +1,23 @@
+<!--display my entrys-->
+<div class="wrapper">
+  <app-start-page></app-start-page>
+<div class="my-entrys-wrapper">
+  <div class="entrys-title-header">
+    <h1 class="entrys-title">My Entrys</h1>
+  </div>
+
+
+  <div class="my-entrys">
+    <div class="list-entry" *ngFor="let note of notes; let i = index" (click)="onEditItem(i)">
+    <a style="cursor: pointer;">
+      <div class="title-journal-div">
+      <h3 class="title-text">{{ note.title }}</h3>
+    </div>
+    <div class="desc-div">
+      <p class="desc-text">{{ note.desc }}</p>
+    </div>
+      </a>
+    </div>
+  </div>
+</div>
+</div>

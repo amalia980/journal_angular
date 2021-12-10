@@ -1,16 +1,9 @@
 
 
-.wrapper {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
+
 /*whole form of journal entry block*/
 .form-entry {
-  width: 40%;
+  width: 40vw;
   height: 85vh;
   background-color: white;
   border-radius: 5%;
@@ -72,62 +65,5 @@
   background-color:indianred;
 }
 
-/*DISPLAY JOURNAL ENTRYS*/
-.my-entrys-wrapper {
-  width: 18rem;
-  height: 85vh;
-  margin-left: 1rem;
-}
 
-.entrys-title-header {
-  height: 3rem;
-  width: 18rem;
-  background-color: rgb(203, 203, 255);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.my-entrys {
-  overflow-y:scroll;
-  height: 80vh;
-}
-
-/*display a new box of title and description of journal*/
-
-.list-entry {
-  margin-top: 0.5rem;
-}
-
-.entrys-title {
-  text-align: center;
-}
-
-.title-journal-div {
-  background-color: rgb(255, 255, 255, 0.7);
-  margin: 0;
-  height: 2rem;
-  width: 16.5rem;
-  display: flex;
- align-items: center;
-}
-
-.title-text {
-  margin-left: 0.5rem;
-}
-
-.desc-div {
-  width: 16.5rem;
-  background-color: rgba(255,255,255,0.2);
-  height: 3.5rem;
-}
-
-.desc-div > p {
-  padding: 0.5rem;
-
-}
-
-.desc-text {
-  margin: 0;
-}
 
